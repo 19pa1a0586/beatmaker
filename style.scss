@@ -1,0 +1,132 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@mixin flex($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+i, svg{
+    pointer-events: none;
+}
+
+.box{
+    width: 5rem;
+    height: 5rem;
+    margin: 1rem 0.5rem;
+    cursor: pointer;
+}
+
+.perc-pad{
+    @extend .box;
+    background-color: rgb(236, 137, 119);
+    &.active{
+        background-color: rgb(233, 83, 57);
+    }
+}
+
+.clap-pad{
+    @extend .box;
+    background-color: rgb(230, 248, 128);
+    &.active{
+        background-color: rgb(186, 216, 19);
+    }
+}
+
+.shaker-pad{
+    @extend .box;
+    background-color: rgb(198, 118, 201);
+    &.active{
+        background-color: rgb(169, 2, 175);
+    }
+}
+
+.beatmaker-main{
+    @include flex(column, center, center);
+    min-height: 100vh;
+}
+
+.operators{
+    @include flex(row, space-between, center);
+    flex: 1;
+    margin: 0rem 2rem;
+}
+
+.perc-track, .clap-track, .shaker-track{
+    @include flex(row, space-between, center);
+    width: 80%;
+    margin-top: 3rem;
+
+    button{
+        padding: 1rem;
+        border: none;
+        color: white;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: all 0.5rem ease;
+        background-color: gray;
+    }
+}
+
+.perc, .clap, .shaker{
+    @include flex(row, center, center);
+}
+
+.pad{
+    transition: all 0.5rem ease;
+}
+
+.play{
+    padding: 1rem 2rem;
+    cursor: pointer;
+    border: none;
+    font-size: 1.5rem;
+    background-color: gray;
+    color: white;
+    margin-top: 2rem;
+}
+
+select{
+    padding: 0.2rem;
+    font-size: 0.9rem;
+}
+
+.mute.active{
+    background-color: rgb(221, 213, 213);
+}
+
+.tempo{
+    margin: 2rem;
+    width: 30%;
+
+    .tempo-slider{
+        padding: 0.2rem;
+        -webkit-appearance: none;
+        cursor: pointer;
+        margin: 1rem 0rem;
+        width: 100%;
+        background-color: gray;
+        position: relative;
+        border-radius: 1rem;
+    }
+
+    & p{
+        font-size: 1.5rem;
+        // margin: 2rem;
+        text-align: center;
+    }
+}
+
+@keyframes playbox{
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.2);
+    }
+}

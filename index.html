@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="rjlogo.svg">
+    <link rel="stylesheet" href="style.css">
+    <title>Siva Prasad | Beatmaker</title>
+</head>
+
+<body>
+
+    <div class="beatmaker-main">
+        <div class="perc-track">
+            <div class="operators">
+                <h1>Kick</h1>
+                <button data-track="0" class="mute perc-volume">
+                    <i class="fas fa-microphone-alt-slash"></i>
+                </button>
+                <select name="perc-select" id="perc-select">
+                    <option value="/sounds/perc-808.wav">808 Perc</option>
+                    <option value="/sounds/perc-chirpy.wav">Chirpy Perc</option>
+                    <option value="/sounds/perc-hollow.wav">Hollow Perc</option>
+                    <option value="/sounds/perc-laser.wav">Laser Perc</option>
+                    <option value="/sounds/perc-metal.wav">Metal Perc</option>
+                    <option value="/sounds/perc-nasty.wav">Nasty Perc</option>
+                </select>
+            </div>
+            <div class="perc">
+                <div class="pad perc-pad b0"></div>
+                <div class="pad perc-pad b1"></div>
+                <div class="pad perc-pad b2"></div>
+                <div class="pad perc-pad b3"></div>
+                <div class="pad perc-pad b4"></div>
+                <div class="pad perc-pad b5"></div>
+                <div class="pad perc-pad b6"></div>
+                <div class="pad perc-pad b7"></div>
+                <div class="pad perc-pad b8"></div>
+            </div>
+        </div>
+
+        <div class="clap-track">
+            <div class="operators">
+                <h1>Clap</h1>
+                <button data-track="1" class="mute clap-volume">
+                    <i class="fas fa-microphone-alt-slash"></i>
+                </button>
+                <select name="clap-select" id="clap-select">
+                    <option value="/sounds/clap-808.wav">808 Clap</option>
+                    <option value="/sounds/clap-analog.wav">Analog Clap</option>
+                    <option value="/sounds/clap-crushed.wav">Crushed Clap</option>
+                    <option value="/sounds/clap-fat.wav">Fat Clap</option>
+                    <option value="/sounds/clap-slapper.wav">Slapper Clap</option>
+                    <option value="/sounds/clap-tape.wav">Tape Clap</option>
+                </select>
+            </div>
+            <div class="clap">
+                <div class="pad clap-pad b0"></div>
+                <div class="pad clap-pad b1"></div>
+                <div class="pad clap-pad b2"></div>
+                <div class="pad clap-pad b3"></div>
+                <div class="pad clap-pad b4"></div>
+                <div class="pad clap-pad b5"></div>
+                <div class="pad clap-pad b6"></div>
+                <div class="pad clap-pad b7"></div>
+                <div class="pad clap-pad b8"></div>
+            </div>
+        </div>
+
+        <div class="shaker-track">
+            <div class="operators">
+                <h1>Shaker</h1>
+                <button data-track="2" class="mute shaker-volume">
+                    <i class="fas fa-microphone-alt-slash"></i>
+                </button>
+                <select name="shaker-select" id="shaker-select">
+                    <option value="/sounds/shaker-shuffle.wav">shuffle Shaker</option>
+                    <option value="/sounds/shaker-analog.wav">Analog Shaker</option>
+                    <option value="/sounds/shaker-suckup.wav">Suckup Shaker</option>
+                </select>
+            </div>
+            <div class="shaker">
+                <div class="pad shaker-pad b0"></div>
+                <div class="pad shaker-pad b1"></div>
+                <div class="pad shaker-pad b2"></div>
+                <div class="pad shaker-pad b3"></div>
+                <div class="pad shaker-pad b4"></div>
+                <div class="pad shaker-pad b5"></div>
+                <div class="pad shaker-pad b6"></div>
+                <div class="pad shaker-pad b7"></div>
+                <div class="pad shaker-pad b8"></div>
+            </div>
+        </div>
+
+        <button class="play">Play</button>
+
+        <div class="tempo">
+            <input type="range" class="tempo-slider" max="300" min="20" value="150">
+            <p>Tempo : <span class="tempo-number">150</span></p>
+        </div>
+    </div>
+
+    <audio class="perc-sound" src="/sounds/perc-808.wav"></audio>
+    <audio class="clap-sound" src="/sounds/clap-808.wav"></audio>
+    <audio class="shaker-sound" src="/sounds/shaker-shuffle.wav"></audio>
+
+
+    <script src="beatmaker.js"></script>
+</body>
+
+</html>

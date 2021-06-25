@@ -1,0 +1,191 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+i, svg {
+  pointer-events: none;
+}
+
+.box, .perc-pad, .clap-pad, .shaker-pad {
+  width: 5rem;
+  height: 5rem;
+  margin: 1rem 0.5rem;
+  cursor: pointer;
+}
+
+.perc-pad {
+  background-color: #ec8977;
+}
+
+.perc-pad.active {
+  background-color: #e95339;
+}
+
+.clap-pad {
+  background-color: #e6f880;
+}
+
+.clap-pad.active {
+  background-color: #bad813;
+}
+
+.shaker-pad {
+  background-color: #c676c9;
+}
+
+.shaker-pad.active {
+  background-color: #a902af;
+}
+
+.beatmaker-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+}
+
+.operators {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin: 0rem 2rem;
+}
+
+.perc-track, .clap-track, .shaker-track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80%;
+  margin-top: 3rem;
+}
+
+.perc-track button, .clap-track button, .shaker-track button {
+  padding: 1rem;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  -webkit-transition: all 0.5rem ease;
+  transition: all 0.5rem ease;
+  background-color: gray;
+}
+
+.perc, .clap, .shaker {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pad {
+  -webkit-transition: all 0.5rem ease;
+  transition: all 0.5rem ease;
+}
+
+.play {
+  padding: 1rem 2rem;
+  cursor: pointer;
+  border: none;
+  font-size: 1.5rem;
+  background-color: gray;
+  color: white;
+  margin-top: 2rem;
+}
+
+select {
+  padding: 0.2rem;
+  font-size: 0.9rem;
+}
+
+.mute.active {
+  background-color: #ddd5d5;
+}
+
+.tempo {
+  margin: 2rem;
+  width: 30%;
+}
+
+.tempo .tempo-slider {
+  padding: 0.2rem;
+  -webkit-appearance: none;
+  cursor: pointer;
+  margin: 1rem 0rem;
+  width: 100%;
+  background-color: gray;
+  position: relative;
+  border-radius: 1rem;
+}
+
+.tempo p {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+@-webkit-keyframes playbox {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+
+@keyframes playbox {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+/*# sourceMappingURL=style.css.map */
